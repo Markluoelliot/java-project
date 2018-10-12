@@ -1,0 +1,9 @@
+com\moli\manager\utils\FileUploadWriter.class
+com\moli\manager\controller\CmsCategoryController.class
+com\moli\manager\controller\CmsContentController.class
+com\moli\manager\controller\PictureController.class
+com\moli\manager\controller\ItemController.class
+com\moli\manager\controller\PageController.class
+com\moli\manager\utils\LocalFileUploadWriter.class
+com\moli\manager\controller\ItemCatController.class
+com\moli\manager\controller\SearchIndexImportController.class

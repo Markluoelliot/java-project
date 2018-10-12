@@ -1,0 +1,6 @@
+com\moli\search\service\impl\SearchServiceImpl.class
+com\moli\search\dao\impl\SearchDaoImpl.class
+com\moli\search\service\impl\TestSearchServiceImpl.class
+com\moli\search\dao\SearchDao.class
+com\moli\search\service\impl\SearchItemServiceImpl.class
+com\moli\search\mapper\ItemMapper.class

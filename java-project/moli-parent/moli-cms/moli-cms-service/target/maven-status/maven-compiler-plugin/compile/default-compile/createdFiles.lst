@@ -1,0 +1,3 @@
+com\moli\cms\service\impl\CmsContentServiceImpl.class
+com\moli\cms\service\jedisclient\impl\PoolJedisClient.class
+com\moli\cms\service\impl\CmsCategoryServiceImpl.class

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>  
+    <!-- This is default config! -->   
+  
+    <!-- This is my config for mysql-->  
+    <default-config >  
+        <property name="driverClass">com.mysql.jdbc.Driver</property>  
+        <property name="jdbcUrl">jdbc:mysql://123.56.223.223:3306/Test</property>  
+        <property name="user">root</property>  
+        <property name="password">Luo123789!</property>  
+         <!-- 初始化连接池中的连接数，取值应在minPoolSize与maxPoolSize之间，默认为3-->
+        
+    </default-config>  
+      
+      
+    
+</c3p0-config>

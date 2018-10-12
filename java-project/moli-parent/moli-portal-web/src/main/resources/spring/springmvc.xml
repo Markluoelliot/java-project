@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://code.alibabatech.com/schema/dubbo 
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.moli.portal.controller" />
+	
+	
+	<mvc:annotation-driven />
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- 将静态资源自动映射 -->
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/> 
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/> 
+	<mvc:resources location="/WEB-INF/images/" mapping="/img/**"/> 
+	<!-- 设置上传文件最大值   1M=1*1024*1024(B)=1048576 bytes -->    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">    
+        <property name="maxUploadSize" value="1048576" />    
+    </bean>  
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+        <constructor-arg name="port" value="6379"></constructor-arg>
+    </bean>
+    <bean id="poolJedisClient" class="com.moli.cms.service.jedisclient.impl.PoolJedisClient" />
+    <context:component-scan base-package="com.moli.cms.service.impl" />
+	<!-- 配置dubbo服务 -->
+    <!-- <dubbo:application name="moli-manager-web" /> -->
+    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <!-- <dubbo:registry protocol="zookeeper" address="123.56.223.223:2181" /> -->
+    <!-- <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>-->
+    <!-- <dubbo:reference interface="com.moli.manager.service.ItemService" id="itemServiceImpl" /> -->
+    <!-- <dubbo:reference interface="com.moli.manager.service.ItemCatService" id="itemCatServiceImpl" /> -->
+</beans>

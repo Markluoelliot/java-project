@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<settings>
+	    <setting name="logImpl" value="LOG4J"/>
+	    <setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	
+	
+	<!-- 包的别名控制 -->
+	<typeAliases>
+	    <package name="com.cn.model" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://123.56.223.223:3306/Test" />
+				<property name="username" value="root" />
+				<property name="password" value="Luo123789!" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 其他配置文件，mapper配置文件就是类和数据库的配置映射文件 -->
+	<mappers>
+		<mapper resource="mybatis/mapper/CountryMapper.xml" />
+		<mapper resource="mybatis/mapper/UserMapper.xml" />
+		<mapper resource="mybatis/mapper/RoleMapper.xml" />
+		<mapper resource="mybatis/mapper/UserRoleMapper.xml" />
+		<mapper resource="mybatis/mapper/PrivilegeMapper.xml" />
+		<mapper resource="mybatis/mapper/RolePrivilegeMapper.xml" />
+		
+	    <!-- 还有种方法
+	     <package name="com.cn.mapper"/>
+	     -->
+	</mappers>
+	
+</configuration>

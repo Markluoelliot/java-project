@@ -1,0 +1,9 @@
+com\moli\common\utils\JsonUtils.class
+com\moli\common\utils\IDUtils.class
+com\moli\common\pojo\PictureResult.class
+com\moli\common\pojo\EasyUIDataGridResult.class
+com\moli\common\pojo\EasyUITreeNode.class
+com\moli\common\pojo\SearchItem.class
+com\moli\common\pojo\MoliResult.class
+com\moli\common\pojo\SearchResult.class
+com\moli\common\pojo\Ad1Node.class

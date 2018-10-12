@@ -1,0 +1,11 @@
+com\moli\manager\mapper\TbContentCategoryMapper.class
+com\moli\manager\mapper\TbOrderMapper.class
+com\moli\manager\mapper\TbUserMapper.class
+com\moli\manager\mapper\TbContentMapper.class
+com\moli\manager\mapper\TbItemDescMapper.class
+com\moli\manager\mapper\TbItemParamItemMapper.class
+com\moli\manager\mapper\TbOrderItemMapper.class
+com\moli\manager\mapper\TbItemMapper.class
+com\moli\manager\mapper\TbItemCatMapper.class
+com\moli\manager\mapper\TbItemParamMapper.class
+com\moli\manager\mapper\TbOrderShippingMapper.class

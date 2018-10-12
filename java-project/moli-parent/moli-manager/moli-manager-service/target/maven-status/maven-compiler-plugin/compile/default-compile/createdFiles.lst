@@ -1,0 +1,5 @@
+com\moli\manager\service\impl\ItemServiceImpl.class
+test\Test.class
+com\moli\manager\service\bootstrap\ManagerServiceBootStrap.class
+test\Test$1.class
+com\moli\manager\service\impl\ItemCatServiceImpl.class
